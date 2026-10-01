@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://cup2k2slr7y88"]
 
+[ext_resource type="Script" uid="uid://buv67qtv3dl8k" path="res://clock.gd" id="1_ig7tw"]
+
 [node name="Main" type="Node2D" unique_id=95602070]
 
 [node name="Computer" type="Control" parent="." unique_id=1255802782]
@@ -7,3 +9,6 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="Clock" type="Timer" parent="Computer" unique_id=216408107]
+script = ExtResource("1_ig7tw")
