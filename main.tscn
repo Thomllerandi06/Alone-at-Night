@@ -1,7 +1,16 @@
 [gd_scene format=3 uid="uid://cup2k2slr7y88"]
 
+[ext_resource type="Script" uid="uid://cnhwtvdx3javn" path="res://main.gd" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://c7g3oimcx8shy" path="res://computer.tscn" id="1_ig7tw"]
 
 [node name="Main" type="Node2D" unique_id=95602070]
+script = ExtResource("1_0xm2m")
 
 [node name="Computer" parent="." unique_id=1302234856 instance=ExtResource("1_ig7tw")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 1150.0
+offset_bottom = 649.0
+grow_horizontal = 1
+grow_vertical = 1
