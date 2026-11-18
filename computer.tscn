@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://c7g3oimcx8shy"]
+
+[ext_resource type="Script" uid="uid://ybobwd2vrygj" path="res://clock.gd" id="1_k1uhn"]
+[ext_resource type="PackedScene" uid="uid://cbwml3tx4g5dw" path="res://desktop.tscn" id="2_gxngq"]
+[ext_resource type="PackedScene" uid="uid://630036ghqnlt" path="res://cameras.tscn" id="3_iiass"]
+[ext_resource type="PackedScene" uid="uid://o7pbmd5jsgeo" path="res://communications.tscn" id="4_pgtsp"]
+[ext_resource type="PackedScene" uid="uid://cmki6njdsemfq" path="res://logs.tscn" id="5_o7oi2"]
+[ext_resource type="PackedScene" uid="uid://vlbq2reu4mny" path="res://security.tscn" id="6_a1vod"]
+[ext_resource type="PackedScene" uid="uid://bfkmkhdb7qgkj" path="res://administration.tscn" id="7_7rrbn"]
+
+[node name="computer" type="Control" unique_id=301051279]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="." unique_id=1680482382]
+layout_mode = 0
+offset_right = 1150.0
+offset_bottom = 649.0
+color = Color(0, 0, 0, 1)
+
+[node name="Content" type="Control" parent="." unique_id=1671743969]
+anchors_preset = 0
+offset_right = 1150.0
+offset_bottom = 646.0
+
+[node name="Desktop" parent="Content" unique_id=1628555597 instance=ExtResource("2_gxngq")]
+layout_mode = 1
+
+[node name="Cameras" parent="Content" unique_id=1568565517 instance=ExtResource("3_iiass")]
+layout_mode = 1
+
+[node name="Communications" parent="Content" unique_id=679406147 instance=ExtResource("4_pgtsp")]
+layout_mode = 1
+
+[node name="Logs" parent="Content" unique_id=2118363239 instance=ExtResource("5_o7oi2")]
+layout_mode = 1
+
+[node name="Security" parent="Content" unique_id=633666724 instance=ExtResource("6_a1vod")]
+layout_mode = 1
+
+[node name="Administration" parent="Content" unique_id=1924212769 instance=ExtResource("7_7rrbn")]
+layout_mode = 1
+offset_left = 3.0
+offset_right = 3.0
+offset_bottom = 2.0
+
+[node name="Menu" type="HBoxContainer" parent="." unique_id=445811562]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -64.0
+offset_right = 2.0
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 90
+alignment = 1
+
+[node name="DesktopButton" type="Button" parent="Menu" unique_id=1426593990]
+layout_mode = 2
+text = "Desktop"
+
+[node name="CamerasButton" type="Button" parent="Menu" unique_id=1986342294]
+layout_mode = 2
+text = "Cameras"
+
+[node name="CommsButton" type="Button" parent="Menu" unique_id=926787107]
+layout_mode = 2
+text = "Comms"
+
+[node name="LogsButton" type="Button" parent="Menu" unique_id=1470579814]
+layout_mode = 2
+text = "Logs"
+
+[node name="SecurityButton" type="Button" parent="Menu" unique_id=871058812]
+layout_mode = 2
+text = "Security"
+
+[node name="AdminButton" type="Button" parent="Menu" unique_id=1646861591]
+layout_mode = 2
+text = "Admin"
+
+[node name="Header" type="Label" parent="." unique_id=1773470507]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 23.0
+offset_right = 105.0
+offset_bottom = 48.0
+text = "Desktop"
+
+[node name="Clock" type="Label" parent="." unique_id=1437844449]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1061.0
+offset_top = 23.0
+offset_right = -49.0
+offset_bottom = -602.0
+text = "19:00"
+script = ExtResource("1_k1uhn")
+
+[node name="Status" type="Label" parent="." unique_id=1358918516]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 23.0
+offset_right = 653.0
+offset_bottom = 50.0
+text = "Sam's computer"
